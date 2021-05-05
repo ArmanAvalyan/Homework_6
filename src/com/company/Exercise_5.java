@@ -1,5 +1,5 @@
 /* Create a function that takes a string and returns a new string with each new
-character accumulating by +1. Separate each set with a dash */
+character accumulating by +1. Separate each set with a dash. */
 
 package com.company;
 
@@ -11,22 +11,24 @@ public class Exercise_5 {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter the text: ");
         String text = scanner.nextLine();
-        accum(text);
+        String result = accum(text);
+        System.out.println("(" + text + ") ➞ " + result);
     }
 
-    static void accum(String text) {
-        String txt = "";
+    static String accum(String text) {
+        String result = "";
         for (int i = 0; i < text.length(); i++) {
             char c = text.charAt(i);
-            for (int j = 0; j <= i ; j++) {
+            for (int j = 0; j <= i; j++) {
                 if (j == 0)
-                    txt += Character.toUpperCase(c);
+                    result += Character.toUpperCase(c);
                 else
-                    txt += Character.toLowerCase(c);
+                    result += Character.toLowerCase(c);
             }
-            txt += "-";
+            result += "-";
         }
-        System.out.println(txt.substring(0, txt.length()-1));
+        result = (result.substring(0, result.length() - 1));
 
+        return result;
     }
 }

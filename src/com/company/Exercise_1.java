@@ -1,5 +1,5 @@
 /* Given a string, return a string length 1 from its front, unless front is false, in
-which case return a string length 1 from its back. The string will be non-empty */
+which case return a string length 1 from its back. The string will be non-empty. */
 
 package com.company;
 
@@ -15,8 +15,7 @@ public class Exercise_1 {
         System.out.print("Front is true or false? ");
         front = scanner.nextBoolean();
         String newText = theEnd(text, front);
-        System.out.println("theEnd(" + text + "," + front + ")" + " → " + newText);
-
+        System.out.println("(" + text + ", " + front + ")" + " → " + newText);
     }
 
     static String theEnd(String text, boolean front) {

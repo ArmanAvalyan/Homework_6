@@ -13,22 +13,21 @@ public class Exercise_4 {
         System.out.print("Enter the text: ");
         String text = scanner.nextLine();
         boolean equals = equalsNote(text);
-        System.out.println(equals);
+        System.out.println("(" + text + ") → " + equals);
     }
 
     static boolean equalsNote(String text) {
         int is = 0;
         int not = 0;
-        if (text.length() <= 2 && text.substring(text.length() - 2).equals("is"))
+        if (text.length() <= 2 && text.endsWith("is"))
             is++;
-        for (int i = 0; i <= text.length() - 3; i++) {
-            if (text.substring(i, i + 2).equals("is"))
+        for (int i = 0; i <= text.length(); i++) {
+            if (text.startsWith("is", i))
                 is++;
-            else if (text.substring(i, i + 3).equals("not"))
+            else if (text.startsWith("not", i))
                 not++;
         }
-        System.out.println(is + " " + not);
-        System.out.println(text.length());
+
         return is == not;
     }
 }

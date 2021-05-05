@@ -11,8 +11,7 @@ public class Exercise_2 {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter the text: ");
         String text = scanner.nextLine();
-        System.out.println("extraFront(" + text+ ") → " + extraFront(text));
-
+        System.out.println("(" + text + ") → " + extraFront(text));
     }
 
     static String extraFront(String text) {
