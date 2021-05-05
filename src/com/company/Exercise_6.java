@@ -16,11 +16,13 @@ public class Exercise_6 {
     }
 
     static String emphasize(String text) {
-        String[] txt = text.split(" ");
+        String[] strArray = text.split(" ");
         String result;
-        for (int i = 0; i < txt.length; i++) {
-            txt[i] = txt[i].substring(0, 1).toUpperCase() + txt[i].substring(1).toLowerCase();
+        for (int i = 0; i < strArray.length; i++) {
+            strArray[i] = strArray[i].substring(0, 1).toUpperCase() + strArray[i].substring(1).toLowerCase();
         }
-        return String.join(" ", txt);
+        result = String.join(" ", strArray);
+
+        return result;
     }
 }
